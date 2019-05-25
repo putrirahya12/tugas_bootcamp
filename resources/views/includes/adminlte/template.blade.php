@@ -26,6 +26,9 @@
             @endisset
             <!-- /.content-header -->
 
+            {{-- flash message notification --}}
+            @include('includes.adminlte.notif')
+            
             <!-- Main content -->
             <div class="content @isset($content_title) '' @else pt-2 @endisset">
                 @yield('content')

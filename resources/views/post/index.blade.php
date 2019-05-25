@@ -16,7 +16,13 @@
             </div>
         </div>
         <div class="card-body">
-            <table class="table table-striped table-bordered">
+            {{-- add button --}}
+            <a href="{{ url('posts/create') }}" class="btn btn-sm btn-success">
+                <i class="fa fa-plus"></i> Tambah
+            </a>
+
+            {{-- tabel data --}}
+            <table class="table table-striped table-bordered mt-2">
                 <tr>
                     <th>No</th>
                     <th>Judul</th>
@@ -33,12 +39,17 @@
                             {!! $post->is_draft == '1' ? '<span class="badge badge-warning">Draft</span>' : '<span class="badge badge-success">Publish</span>' !!}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-sm btn-primary">
+                            <a href="{{ url('posts/' . $post->id . '/edit') }}" class="btn btn-sm btn-primary">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="#" class="btn btn-sm btn-danger">
-                                <i class="fa fa-trash"></i>
-                            </a>
+                            <form action="{{ url('posts/' . $post->id) }}" method="post" style="display: inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </table>
