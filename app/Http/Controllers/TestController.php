@@ -13,9 +13,10 @@ class TestController extends Controller
      */
     public function index()
     {
-        $pesan = 'Welcome to Test Page!';
+        $data = "TypingClub is the most effective way to learn how to type.
+        It is web based, and highly effective. TypingClub is (and will always be) free for both individuals and schools. There is an optional paid school edition.";
 
-        return view('test', compact('pesan'));
+        return view('test', compact('data'));
     }
 
     /**

@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', 'TestController@index');
+Route::get('/posts', 'PostController@index');
 
 Route::get('/adminlte', function () {
     return view('adminlte');
