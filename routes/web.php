@@ -30,3 +30,7 @@ Route::get('/adminlte', function () {
 Route::get('/belajar-js', function () {
     return view('belajar-js');
 });
+
+Route::get('/coba-perubahan', function () {
+    return view('test');
+});
