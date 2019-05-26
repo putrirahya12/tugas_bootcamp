@@ -26,3 +26,7 @@ Route::delete('/posts/{id}', 'PostController@destroy');
 Route::get('/adminlte', function () {
     return view('adminlte');
 });
+
+Route::get('/belajar-js', function () {
+    return view('belajar-js');
+});
