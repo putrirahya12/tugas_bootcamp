@@ -14,9 +14,24 @@
         Sembunyikan Info
     </a>
 
-    <div><span>coba target saya 1!</span></div>
+    {{-- <div><span>coba target saya 1!</span></div>
     <div><span>coba target saya 2!</span></div>
-    <div><span>coba target saya 3!</span></div>
+    <div><span>coba target saya 3!</span></div> --}}
+
+    {{-- bootstrap card --}}
+    {{-- <div class="card mt-3" style="width: 18rem;">
+        <img class="card-img-top" src="https://via.placeholder.com/300x200" alt="User image">
+        <div class="card-body">
+          <h5 class="card-title">Nama Pengguna</h5>
+          <p class="card-text">
+              Email: <span>x</span>
+          </p>
+        </div>
+    </div> --}}
+
+    <div class="card-area row">
+        {{-- generate card nya di dalam sini --}}
+    </div>
     
 @endsection
 

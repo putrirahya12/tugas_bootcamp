@@ -31,14 +31,20 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/test') }}" class="nav-link {{ Request::segment(1) == 'test' ? 'active' : '' }}">
-                        <i class="nav-icon fa fa-circle-o"></i>
+                        <i class="nav-icon fa fa-info"></i>
                         <p>Test</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/posts') }}" class="nav-link {{ Request::segment(1) == 'posts' ? 'active' : '' }}">
-                        <i class="nav-icon fa fa-circle-o"></i>
+                        <i class="nav-icon fa fa-rss"></i>
                         <p>Posts</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('/categories') }}" class="nav-link {{ Request::segment(1) == 'categories' ? 'active' : '' }}">
+                        <i class="nav-icon fa fa-tags"></i>
+                        <p>Categories</p>
                     </a>
                 </li>
             </ul>

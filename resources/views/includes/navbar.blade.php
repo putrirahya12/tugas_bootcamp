@@ -14,6 +14,9 @@
                 <a class="nav-link {{ Request::segment(1) == 'posts' ? 'active' : '' }}" href="{{ url('/posts') }}">Posts</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link {{ Request::segment(1) == 'categories' ? 'active' : '' }}" href="{{ url('/categories') }}">Categories</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link {{ Request::segment(1) == 'test' ? 'active' : '' }}" href="{{ url('/test') }}">Test Halaman Baru</a> 
             </li>
         </ul>
