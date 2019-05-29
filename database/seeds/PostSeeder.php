@@ -15,7 +15,6 @@ class PostSeeder extends Seeder
         $faker = Faker::create('id_ID');
     	foreach (range(1, 10) as $index) {
             DB::table('posts')->insert([
-                'category_id' => 1,
                 'author_id' => 1,
                 'title' => $faker->name,
                 'content' => $faker->text,
