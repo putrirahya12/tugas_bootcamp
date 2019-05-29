@@ -46,12 +46,14 @@ class CategoryController extends Controller
         if ($save) {
             return response()->json([
                 'success' => true,
+                'type' => 'add',
                 'message' => 'Berhasil menambah kategori baru'
             ]);
         }
 
         return response()->json([
             'success' => false,
+            'type' => 'add',
             'message' => 'Gagal menambah kategori!'
         ]);
     }
@@ -87,7 +89,26 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category = $request->all();
+        $update = Category::where('id', $id)->update([
+            'name' => $category['name'],
+            'description' => $category['description']
+        ]);
+
+        if ($update) {
+            return response()->json([
+                'success' => true,
+                'type' => 'update',
+                'id' => $id,
+                'message' => 'Berhasil mengubah data kategori'
+            ]);
+        }
+
+        return response()->json([
+            'success' => false,
+            'type' => 'update',
+            'message' => 'Gagal mengubah data kategori!'
+        ]);
     }
 
     /**
@@ -98,6 +119,19 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Category::where('id', $id)->delete();
+
+        if ($delete) {
+            return response()->json([
+                'success' => true,
+                'id' => $id,
+                'message' => 'Berhasil menghapus data kategori'
+            ]);
+        }
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Gagal menghapus data kategori!'
+        ]);
     }
 }

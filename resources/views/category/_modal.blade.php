@@ -10,6 +10,7 @@
             </div>
             <div class="modal-body">
                 @csrf
+                @method('PUT')
                 
                 <div class="form-group">
                     <label for="name">Nama Kategori <span class="text-danger">*</span></label>
