@@ -13,7 +13,14 @@ class FrontEndController extends Controller
      */
     public function index()
     {
-        return view('frontend.index');
+        $last_post = [
+            'title' => 'Belajar membaca buku pelajaran.',
+            'author' => 'Bambang Pamungkas',
+            'photo' => 'blogger/img/header-bg.jpg',
+            'date' => '12 Desember 2019 11:20'
+        ];
+
+        return view('frontend.index', compact('last_post'));
     }
 
     /**

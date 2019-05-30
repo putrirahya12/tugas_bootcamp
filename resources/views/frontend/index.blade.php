@@ -61,10 +61,6 @@
                         <h4 class="mt-0"><a href="{{ url('/read/1') }}">Addiction When Gambling
                         Becomes A Problem</a></h4>
                         <p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-                        <div class="meta-bottom d-flex justify-content-between">
-                            <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                            <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                        </div>							 
                         </div>
                     </div>
                     <div class="single-travel media">
@@ -77,10 +73,6 @@
                         <h4 class="mt-0"><a href="{{ url('/read/1') }}">Addiction When Gambling
                         Becomes A Problem</a></h4>
                         <p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-                        <div class="meta-bottom d-flex justify-content-between">
-                            <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                            <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                        </div>							 
                         </div>
                     </div>														
                 </div>
@@ -95,10 +87,6 @@
                         <h4 class="mt-0"><a href="{{ url('/read/1') }}">Addiction When Gambling
                         Becomes A Problem</a></h4>
                         <p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-                        <div class="meta-bottom d-flex justify-content-between">
-                            <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                            <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                        </div>							 
                         </div>
                     </div>
                     <div class="single-travel media">
@@ -111,10 +99,6 @@
                         <h4 class="mt-0"><a href="{{ url('/read/1') }}">Addiction When Gambling
                         Becomes A Problem</a></h4>
                         <p>inappropriate behavior Lorem ipsum dolor sit amet, consectetur.</p>
-                        <div class="meta-bottom d-flex justify-content-between">
-                            <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                            <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-                        </div>							 
                         </div>
                     </div>								
                 </div>
