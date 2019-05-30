@@ -17,12 +17,12 @@
         </div>
         <div class="card-body">
             {{-- add button --}}
-            <a href="{{ url('posts/create') }}" class="btn btn-sm btn-success add-data" data-toggle="modal" data-target="#modal-form">
+            <a href="{{ url('admin/posts/create') }}" class="btn btn-sm btn-success add-data mb-3" data-toggle="modal" data-target="#modal-form">
                 <i class="fa fa-plus"></i> Tambah
             </a>
 
             {{-- tabel data --}}
-            <table class="table table-striped table-bordered mt-2">
+            <table class="table table-striped table-bordered" id="datatable">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -38,10 +38,10 @@
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->description }}</td>
                         <td>
-                            <a href="{{ url('categories/' . $category->id . '/edit') }}" class="btn btn-sm btn-primary edit-data">
+                            <a href="{{ url('admin/categories/' . $category->id . '/edit') }}" class="btn btn-sm btn-primary edit-data">
                                 <i class="fa fa-edit"></i>
                             </a>
-                            <a href="{{ url('categories/' . $category->id) }}" class="btn btn-sm btn-danger delete-data">
+                            <a href="{{ url('admin/categories/' . $category->id) }}" class="btn btn-sm btn-danger delete-data">
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>
@@ -63,9 +63,18 @@
 
 @endsection
 
+@push('css')
+    {{-- datatable css --}}
+    <link rel="stylesheet" href="{{ asset('plugins/datatables/jquery.dataTables.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/datatables/dataTables.bootstrap4.css') }}">
+@endpush
+
 @push('js')
     {{-- sweetalert js --}}
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    {{-- datatable js --}}
+    <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
 
     {{-- custom js --}}
     @include('category._script')

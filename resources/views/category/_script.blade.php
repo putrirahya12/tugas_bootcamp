@@ -1,6 +1,9 @@
 <script>
     $(function() {
-        const targetUrl = '{{ url("categories") }}';
+        const targetUrl = '{{ url("admin/categories") }}';
+
+        // initialize datatable
+        $('#datatable').DataTable();
 
         // aksi saat form add di submit
         $("form").on('submit', function(e) {
@@ -29,8 +32,13 @@
                         removeRow(res.id);
                     }
                 },
-                error: function(err) {
-                    swal("Gagal", res.message, "warning");
+                error: function(xhr) {
+                    let errorText = '';
+                    $.each(xhr.responseJSON.errors, function(key, value) {
+                        errorText += value + ' / ';
+                    }); 
+
+                    swal("Gagal!", errorText, "warning");
                 }
             });
         }); 

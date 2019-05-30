@@ -1,39 +1,52 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Auth routes 
+Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ------------------------------------------------------------
+// Frontend Area
+// ------------------------------------------------------------
+Route::get('/', 'FrontEndController@index');
+Route::get('/read/{id}', 'FrontEndController@show');
+Route::get('/category/{id}', 'FrontEndController@category');
+Route::get('/search/{id}', 'FrontEndController@search');
 
-Route::get('/test', 'TestController@index');
+// ------------------------------------------------------------
+// Admin Prefix Group
+// ------------------------------------------------------------
+Route::prefix('admin')->middleware('auth')->group(function () {
 
-Route::get('/posts', 'PostController@index');
-Route::get('/posts/create', 'PostController@create');
-Route::post('/posts', 'PostController@store');
-Route::get('/posts/{id}/edit', 'PostController@edit');
-Route::put('/posts/{id}', 'PostController@update');
-Route::delete('/posts/{id}', 'PostController@destroy');
+    // ------------------------------------------------------------
+    // Index Dashboard
+    // ------------------------------------------------------------
+    Route::get('/', 'HomeController@index');
 
-Route::resource('/categories', 'CategoryController');
+    // ------------------------------------------------------------
+    // Post
+    // ------------------------------------------------------------
+    Route::get('/posts', 'PostController@index');
+    Route::get('/posts/create', 'PostController@create');
+    Route::post('/posts', 'PostController@store');
+    Route::get('/posts/{id}/edit', 'PostController@edit');
+    Route::put('/posts/{id}', 'PostController@update');
+    Route::delete('/posts/{id}', 'PostController@destroy');
+    
+    // ------------------------------------------------------------
+    // Categories
+    // ------------------------------------------------------------
+    Route::resource('/categories', 'CategoryController');
+    
+    // ------------------------------------------------------------
+    // Static Route  
+    // ------------------------------------------------------------
+    Route::get('/test', 'TestController@index');
+    
+    Route::get('/adminlte', function () {
+        return view('adminlte');
+    });
+    
+    Route::get('/belajar-js', function () {
+        return view('belajar-js');
+    });
 
-Route::get('/adminlte', function () {
-    return view('adminlte');
-});
-
-Route::get('/belajar-js', function () {
-    return view('belajar-js');
-});
-
-Route::get('/coba-perubahan', function () {
-    return view('test');
-});
+});    

@@ -9,7 +9,7 @@
             <h3 class="card-title">Ubah Postingan</h3>
 
             <div class="card-tools">
-                <a href="{{ url('posts') }}" class="btn btn-sm btn-secondary">
+                <a href="{{ url('admin/posts') }}" class="btn btn-sm btn-secondary">
                     <i class="fa fa-arrow-left"></i> Kembali
                 </a>
                 <button type="button" class="btn btn-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="card-body">
-            <form action="{{ url('posts/' . $post->id) }}" method="post">
+            <form action="{{ url('admin/posts/' . $post->id) }}" method="post">
                 @csrf
                 @method('PUT')
                 
