@@ -15,4 +15,20 @@ class Post extends Model
         'image_cover',
         'is_draft'
     ];
+
+    /**
+     * Get the user record associated with the post.
+     */
+    public function author()
+    {
+        return $this->hasOne('App\User', 'id', 'author_id');
+    }
+
+    /**
+     * The category that belong to the post.
+     */
+    public function categories()
+    {
+        return $this->belongsToMany('App\Category', 'post_categories', 'post_id', 'category_id');
+    }
 }

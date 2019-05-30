@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // /**
+    //  * Get the user record associated with the post.
+    //  */
+    // public function post()
+    // {
+    //     return $this->belongsTo('App\Post', 'author_id', 'id');
+    // }
 }

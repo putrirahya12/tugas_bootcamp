@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use App\Http\Requests\PostRequest;
 use App\Post;
 use App\Category;
 use App\PostCategory;
@@ -13,7 +14,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(8);
         // $posts = Post::where('title', 'like', '%man%')->get();
         $dualima = Post::where('id', 25)->first();
 
@@ -28,7 +29,7 @@ class PostController extends Controller
         return view('post.create', compact('categories', 'users'));
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         $input = $request->all();
 
@@ -55,7 +56,7 @@ class PostController extends Controller
         $save_category = PostCategory::insert($category_data);
 
         if ($save_category) {
-            return redirect('/posts')->with('success', 'Berhasil menambah postingan baru.');
+            return redirect('/admin/posts')->with('success', 'Berhasil menambah postingan baru.');
         }
 
         return redirect()->back()->with('error', 'Gagal menambah postingan!');
@@ -80,7 +81,7 @@ class PostController extends Controller
         ]);
 
         if ($update) {
-            return redirect('/posts')->with('success', 'Berhasil mengubah postingan.');
+            return redirect('/admin/posts')->with('success', 'Berhasil mengubah postingan.');
         }
 
         return redirect()->back()->with('error', 'Gagal mengubah postingan!');
@@ -91,7 +92,7 @@ class PostController extends Controller
         $delete = Post::where('id', $id)->delete();
 
         if ($delete) {
-            return redirect('/posts')->with('success', 'Berhasil menghapus postingan.');
+            return redirect('/admin/posts')->with('success', 'Berhasil menghapus postingan.');
         }
 
         return redirect()->back()->with('error', 'Gagal menghapus postingan!');
