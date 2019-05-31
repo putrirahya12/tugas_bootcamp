@@ -35,16 +35,15 @@
                                     <div class="date">
                                         <span>20</span><br>Dec
                                     </div>
-                                    <img src="{{ asset('blogger/img/asset/l1.jpg') }}" alt="">
+                                    <img src="{{ asset($category['photo']) }}" alt="">
                                 </div>
                                 <div class="detail">
                                     <a href="#">
-                                        <h4 class="pb-20">Addiction When Gambling <br>
-                                            Becomes A Problem</h4>
+                                        <h4 class="pb-20">{{$category['title']}} <br>
+                                            </h4>
                                     </a>
                                     <p>
-                                        inappropriate behavior Lorem ipsum dolor sit amet, consecteturinapprop riate
-                                        behavior Lorem ipsum dolor sit amet, consectetur.
+                                       {{$category['content']}}
                                     </p>
                                 </div>
                             </div>

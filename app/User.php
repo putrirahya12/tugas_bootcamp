@@ -40,8 +40,8 @@ class User extends Authenticatable
     // /**
     //  * Get the user record associated with the post.
     //  */
-    // public function post()
-    // {
-    //     return $this->belongsTo('App\Post', 'author_id', 'id');
-    // }
+    public function post()
+    {
+        return $this->belongsTo('App\Post', 'author_id', 'id');
+    }
 }

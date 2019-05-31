@@ -19,19 +19,19 @@
             </div>						
             <div class="active-cat-carusel">
                 <div class="item single-cat">
-                    <img src="{{ asset('blogger/img/c1.jpg') }}" alt="">
-                    <p class="date">10 Jan 2018</p>
-                    <h4><a href="{{ url('/read/1') }}">It S Hurricane Season Visiting Hilton</a></h4>
+                    <img src="{{ asset($last_post ['photo']) }}" alt="">
+                    <p class="date">{{ $last_post ['date'] }}</p>
+                    <h4><a href="{{ url('/read/1') }}">{{ $last_post ['title'] }}</a></h4>
                 </div>
                 <div class="item single-cat">
-                    <img src="{{ asset('blogger/img/c2.jpg') }}" alt="">
-                    <p class="date">10 Jan 2018</p>
-                    <h4><a href="{{ url('/read/1') }}">What Makes A Hotel Boutique</a></h4>
+                    <img src="{{ asset($last_post ['photo']) }}" alt="">
+                    <p class="date">{{ $last_post ['date'] }}</p>
+                    <h4><a href="{{ url('/read/1') }}">{{ $last_post ['title'] }}</a></h4>
                 </div>
                 <div class="item single-cat">
-                    <img src="{{ asset('blogger/img/c3.jpg') }}" alt="">
-                    <p class="date">10 Jan 2018</p>
-                    <h4><a href="{{ url('/read/1') }}">Les Houches The Hidden Gem Valley</a></h4>
+                    <img src="{{ asset($last_post ['photo']) }}" alt="">
+                    <p class="date">{{ $last_post ['date'] }}</p>
+                    <h4><a href="{{ url('/read/1') }}">{{ $last_post ['title'] }}</a></h4>
                 </div>							
             </div>												
         </div>	

@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-lg-6 flex-row d-flex meta-right no-padding justify-content-end">
                     <div class="user-meta">
-                        <h4 class="text-white">{{ $last_post['author'] }}</h4>
+                        <h4 class="text-white">{{ $last_post['author']}}</h4>
                         <p>{{ $last_post['date'] }}</p>
                     </div>
                     <img class="img-fluid user-img" src="{{ asset('blogger/img/user.jpg') }}" alt="">

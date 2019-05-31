@@ -34,15 +34,15 @@
                         <div class="top-wrapper ">
                             <div class="row d-flex justify-content-between">
                                 <h2 class="col-lg-8 col-md-12 text-uppercase">
-                                    A Discount Toner Cartridge Is Better Than Ever
+                                    
                                 </h2>
                                 <div class="col-lg-4 col-md-12 right-side d-flex justify-content-end">
                                     <div class="desc">
-                                        <h2>Mark wiens</h2>
-                                        <h3>12 Dec ,2017 11:21 am</h3>
+                                    <h2>{{$detail ['title']}}</h2>
+                                        <h3>{{$detail ['date']}}</h3>
                                     </div>
                                     <div class="user-img">
-                                        <img src="{{ asset('blogger/img/user.jpg') }}" alt="">
+                                        <img src="{{ asset($detail ['image_cover']) }}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -57,21 +57,11 @@
                         </div>
                         <div class="single-post-content">
                             <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.
-                            </p>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.
+                                {{$detail['content']}}
                             </p>
 
-                            <blockquote>Ea possunt paria non esse. Pudebit te, inquam, illius tabulae, quam Cleanthes sane commode verbis depingere solebat. Urgent tamen et nihil remittunt. An vero displicuit ea, quae tributa est animi virtutibus tanta praestantia? Sint ista Graecorum; Cur igitur, cum de re conveniat, non malumus usitate loqui? Huius ego nunc auctoritatem sequens idem faciam.
-                            <cite>Wise Man</cite></blockquote>
+                            <blockquote><cite>{{Str::limit($detail['content'],50)}}</cite></blockquote>
 
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.
-                            </p>
-                            <p>
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed MCSE training.
-                            </p>
                         </div>                        
                     </div>
                 </div>
